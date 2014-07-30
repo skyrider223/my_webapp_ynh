@@ -31,11 +31,11 @@ sudo yunohost app setting my_webapp ftp_user -v $user
 # Créer le dossier parent des webapp pour l'utilisateur
 if test ! -d $parent_dir
 then	# Créer le dossier parent uniquement si il n'existe pas
-    sudo mkdir -p $parent_dir
+    sudo mkdir $parent_dir
 
     # Set permissions
     sudo chmod 775 -R $parent_dir
-    sudo chown -hR $user:www-data $parent_dir
+    sudo chown -hR www-data:www-data $parent_dir
 else
     echo "Création du dossier $parent_dir ignorée, le dossier existe déjà."
 fi
@@ -43,15 +43,15 @@ fi
 # Change user ID in configurations
 sed -i "s@FTPUSER@$user@g" ../sources/index_ftp.html
 sed -i "s@HOST@$domain@g" ../sources/index_ftp.html
-sed -i "s@NETFTP@$netftp_path@g" ../sources/index_ftp.html
+sed -i "s@NET2FTP@$netftp_path@g" ../sources/index_ftp.html
 
 # Copy files to the right place
-sudo mkdir -p $final_path
+sudo mkdir $final_path
 sudo cp ../sources/index.html $final_path/
 # Vérifie si pure-ftpd est déjà installé
-if test ! -f /usr/sbin/pure-ftpd-ldap
+if test -f /usr/sbin/pure-ftpd-ldap
 then	# Si oui, vérifie si net2ftp est également installé.
-    if test ! -d $parent_dir/netftp
+    if test -d $parent_dir/netftp
     then
 	sudo cp ../sources/index_ftp.html $final_path/index.html	# Remplace l'index.html par celui intégrant les informations ftp
     fi

@@ -6,9 +6,9 @@
         "fr": "App vide sans accès FTP"
     },
     "developer": {
-        "name": "kload. Mod par Maniack Crudelis",
-        "email": "kload@kload.fr; maniack_crudelis@yahoo.fr",
-        "url": "http://kload.fr; http://crudelis.fr"
+        "name": "Maniack Crudelis",
+        "email": "maniack_crudelis@yahoo.fr",
+        "url": "http://crudelis.fr"
     },
     "multi_instance": "true",
     "arguments": {
