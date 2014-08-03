@@ -1,0 +1,52 @@
+{
+    "name": "Custom Webapp",
+    "id": "my_webapp",
+    "description": {
+        "en": "Empty App without FTP access",
+        "fr": "App vide sans accès FTP"
+    },
+    "developer": {
+        "name": "Maniack Crudelis",
+        "email": "maniack_crudelis@yahoo.fr",
+        "url": "http://crudelis.fr"
+    },
+    "multi_instance": "true",
+    "arguments": {
+        "install" : [
+            {
+                "name": "domain",
+                "ask": {
+                    "en": "Choose a domain for your Webapp",
+                    "fr": "Choisissez un domaine pour votre Webapp"
+                },
+                "example": "domain.org"
+            },
+            {
+                "name": "path",
+                "ask": {
+                    "en": "Choose a path for your Webapp",
+                    "fr": "Choisissez un chemin pour votre Webapp"
+                },
+                "example": "/site",
+                "default": "/site"
+            },
+            {
+                "name": "admin",
+                "ask": {
+                    "en": "Choose the YunoHost user",
+                    "fr": "Choisissez l'utilisateur YunoHost associé"
+                },
+                "example": "johndoe"
+            },
+            {
+                "name": "is_public",
+                "ask": {
+                    "en": "Is it a public website ?",
+                    "fr": "Est-ce un site public ?"
+                },
+                "choices": ["Yes", "No"],
+                "default": "Yes"
+            }
+        ]
+    }
+}
