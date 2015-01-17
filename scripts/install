@@ -7,7 +7,7 @@ user=$3
 is_public=$4
 
 parent_dir=/var/www/webapp_$user
-if [ $path = "\\" ]
+if [ $path = "/" ]
 then
     final_path=$parent_dir
     name="root_webapp"
