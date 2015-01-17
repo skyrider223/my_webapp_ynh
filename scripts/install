@@ -6,9 +6,15 @@ path=$2
 user=$3
 is_public=$4
 
-name=$(echo $2 | cut -d '/' -f 2)
 parent_dir=/var/www/webapp_$user
-final_path=$parent_dir$path
+if [ $path = "\\" ]
+then
+    final_path=$parent_dir
+    name="root_webapp"
+else
+    final_path=$parent_dir$path
+    name=$(echo $2 | cut -d '/' -f 2)
+fi
 
 netftp_path=/ftp_webapp_$user
 
