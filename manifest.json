@@ -5,10 +5,9 @@
         "en": "Empty App without FTP access",
         "fr": "App vide sans accès FTP"
     },
-    "developer": {
+    "maintainer": {
         "name": "Maniack Crudelis",
-        "email": "maniack_crudelis@yahoo.fr",
-        "url": "http://crudelis.fr"
+        "email": "maniackc_dev@crudelis.fr"
     },
     "multi_instance": "true",
     "arguments": {
