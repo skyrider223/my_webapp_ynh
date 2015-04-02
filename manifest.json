@@ -1,6 +1,6 @@
 {
-    "name": "Custom Webapp",
-    "id": "my_webapp",
+    "name": "Multi custom webapp",
+    "id": "multi_webapp",
     "description": {
         "en": "Empty App without FTP access",
         "fr": "App vide sans accès FTP"

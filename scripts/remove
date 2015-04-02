@@ -1,8 +1,8 @@
 #!/bin/bash
 
-user=$(sudo yunohost app setting my_webapp ftp_user)
-path=$(sudo yunohost app setting my_webapp path)
-domain=$(sudo yunohost app setting my_webapp domain)
+user=$(sudo yunohost app setting multi_webapp ftp_user)
+path=$(sudo yunohost app setting multi_webapp path)
+domain=$(sudo yunohost app setting multi_webapp domain)
 parent_dir=/var/www/webapp_$user
 name=$(echo $path | cut -d '/' -f 2)
 final_path=$parent_dir$path
